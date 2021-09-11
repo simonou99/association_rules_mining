@@ -298,3 +298,5 @@ allrules1 = apr(data, mspt=0.15,mcf=0.80,mlft=0)
 #OR
 allrules2 = apr(data) #defualt parameters
 ```
+
+***THANK YOU VERY MUCH***
