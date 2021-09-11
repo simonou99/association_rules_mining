@@ -20,12 +20,12 @@ However, it can be modified to process other format.
 The csv should **only** have rows of items or self-assigned categories (e.g. 'milk', 'eggs', 'shop_department:12', 'customer_age:34'), that is, there should not be any headers.<br />
 However items in each row can be stored at random places.
 
-'''
+```
 import numpy as np
 import csv
 from csv import reader
 import pandas as pd
-'''
+```
 
 ## 2. Main codes section for the whole mining procedure
 This will be the codes for the algorithm.
@@ -52,7 +52,7 @@ Following are the culculation for each parameters:
 Normally, we do not change the minimal lift if there are large amount of infrequent rules.<br />
 ***Hence**, assign **mlft=0** if you have very infrequent items data sets or not sure about the rules frequencies in the data.*
 
-'''
+```
 #This is the main funct to run the algorithm.
 def apr(rawd, mspt=0.15,mcf=0.80,mlft=0):
     #since we don't have a freq items data yet,
@@ -67,10 +67,10 @@ def apr(rawd, mspt=0.15,mcf=0.80,mlft=0):
         set_mutable,sptitmlst,sptdct,mspt,c=proc_for_each_row(set_mutable,sptitmlst,sptdct,mspt,c)
     out_rules=get_rules(sptitmlst, sptdct, mcf, mlft)
     return out_rules
-'''
+```
 
 ### ii. Create rules sets:
-'''
+```
 def get_rules(sptitmlst, sptdct, mcf, mlft):
     ruleset=[]
     for i in range(1,len(sptitmlst)):
@@ -85,4 +85,4 @@ def get_rules(sptitmlst, sptdct, mcf, mlft):
             else:
                 get_output(frq, rawfrqlst, sptdct, ruleset, mcf, mlft)
     return ruleset
-'''
+```
