@@ -1,4 +1,4 @@
-# Association Rules Mining Program
+# Association Rules Mining for Recommendation
 Welcome, this is a association miner built with apriori algorithm.  <br />
 Different from the Jupyter's prebuilt algorithm, this one is built by myself and was for one of my school projects, now it's rewritten for personal use.
 
